@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -43,3 +44,32 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+# Rails application preloader
+gem 'spring'
+
+# Railsコンソールの多機能版
+gem 'pry-rails'
+
+# pryの入力に色付け
+gem 'pry-coolline'
+
+# Pryでの便利コマンド
+gem 'pry-doc'
+
+# PryでのSQLの結果を綺麗に表示
+gem 'hirb'
+gem 'hirb-unicode'
+
+# pryの色付けをしてくれる
+gem 'awesome_print'
+
+# パス
+gem 'sextant'
+
+# エラーを綺麗に
+gem 'better_errors'
+
+gem 'shotgun'
+
+gem 'anjlab-bootstrap-rails', '~> 3.0.0.3', :require => 'bootstrap-rails'
