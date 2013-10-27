@@ -10,6 +10,9 @@ class PostsController < ApplicationController
   # GET /posts/1
   # GET /posts/1.json
   def show
+    # @post.versions.each do |e|
+    #   ap e
+    # end
   end
 
   # GET /posts/new
@@ -42,7 +45,10 @@ class PostsController < ApplicationController
   def update
     respond_to do |format|
       if @post.update(post_params)
-        format.html { redirect_to @post, notice: 'Post was successfully updated.' }
+        format.html {
+          undo_link = view_context.link_to('undo', revert_path(@post.versions.last), :method => :post)
+          redirect_to @post, notice: 'Post was successfully updated.' + undo_link
+        }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }

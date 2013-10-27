@@ -1,5 +1,8 @@
 MRuby::Application.routes.draw do
   resources :posts
+  root :to => 'posts#index'
+  post "versions/:id/revert" => "versions#revert", :as => "revert"
+  #   post "versions/:id/revert_version" => "versions#revert_version", :as => "revert_version"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -41,7 +44,7 @@ MRuby::Application.routes.draw do
   #       get 'recent', on: :collection
   #     end
   #   end
-  
+
   # Example resource route with concerns:
   #   concern :toggleable do
   #     post 'toggle'

@@ -73,3 +73,8 @@ gem 'better_errors'
 gem 'shotgun'
 
 gem 'anjlab-bootstrap-rails', '~> 3.0.0.3', :require => 'bootstrap-rails'
+
+gem 'paper_trail', '>= 3.0.0.beta1'
+
+# check diff
+gem 'diffy'
